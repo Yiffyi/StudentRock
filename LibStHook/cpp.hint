@@ -1,0 +1,2 @@
+#define LIBSTHOOK_API __declspec(dllexport)
+#define LIBSTHOOK_API __declspec(dllimport)
