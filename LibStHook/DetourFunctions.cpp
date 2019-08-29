@@ -43,7 +43,15 @@ BOOL WINAPI DetourSetWindowPos(HWND hWnd, HWND hWndInsertAfter, int  X, int  Y, 
 
 int WINAPI DetourGetDIBits(HDC hdc, HBITMAP hbm, UINT start, UINT cLines, LPVOID lpvBits, LPBITMAPINFO lpbmi, UINT usage)
 {
-	if (g_noScreenWatch) {
+	if (g_noScreenWatch && lpvBits != NULL) {
+		HBITMAP hbm = NULL;
+		if (OpenClipboard(NULL)) {
+			hbm = (HBITMAP)GetClipboardData(CF_BITMAP);
+			CloseClipboard();
+			int ret = fpGetDIBits(hdc, hbm, start, cLines, lpvBits, lpbmi, usage);
+			printf("[Info] read from clipboard: GetDIBits:%d\n", ret);
+			return ret;
+		}
 		printf("[Info] disallowed GetDIBits.\n");
 		return FALSE;
 	}
