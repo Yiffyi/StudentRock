@@ -14,7 +14,7 @@
 extern BOOL g_enableTerminate;
 extern BOOL g_unhookKeyboard;
 extern BOOL g_exitStMain;
-extern BOOL g_noScreenWatch;
+extern BOOL g_fakeScreenshot;
 extern BOOL g_noTopMostWindow;
 extern TCHAR g_StMainPath[MAX_PATH];
 extern DWORD g_StMainId;
@@ -24,7 +24,7 @@ extern "C" LIBSTHOOK_API BOOL UnsetGlobalHook();
 extern "C" LIBSTHOOK_API VOID SetEnableTerminate(BOOL x);
 extern "C" LIBSTHOOK_API VOID SetUnhookKeyboard(BOOL x);
 extern "C" LIBSTHOOK_API VOID SetExitStMain(BOOL x);
-extern "C" LIBSTHOOK_API VOID SetNoScreenWatch(BOOL x);
+extern "C" LIBSTHOOK_API VOID SetFakeScreenshot(BOOL x);
 extern "C" LIBSTHOOK_API VOID SetNoTopMostWindow(BOOL x);
 extern "C" LIBSTHOOK_API VOID SetShowConsole(BOOL x);
 extern "C" LIBSTHOOK_API LPCSTR GetStMainPath();

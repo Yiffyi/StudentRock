@@ -50,7 +50,7 @@ namespace StudentRock
         public static extern void SetExitStMain(int x);
 
         [DllImport("LibStHook.dll")]
-        public static extern void SetNoScreenWatch(int x);
+        public static extern void SetFakeScreenshot(int x);
 
         [DllImport("LibStHook.dll")]
         public static extern void SetNoTopMostWindow(int x);

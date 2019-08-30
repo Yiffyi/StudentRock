@@ -35,8 +35,8 @@ namespace StudentRock
             if (c_enableTerminate.Checked) LibStHook.SetEnableTerminate(1);
             else LibStHook.SetEnableTerminate(0);
 
-            if (c_noScreenWatch.Checked) LibStHook.SetNoScreenWatch(1);
-            else LibStHook.SetNoScreenWatch(0);
+            if (c_fakeScreenshot.Checked) LibStHook.SetFakeScreenshot(1);
+            else LibStHook.SetFakeScreenshot(0);
 
             if (c_unhookKeyboard.Checked) LibStHook.SetUnhookKeyboard(1);
             else LibStHook.SetUnhookKeyboard(0);

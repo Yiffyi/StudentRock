@@ -15,7 +15,7 @@ HHOOK g_hHook = NULL;
 BOOL g_enableTerminate = FALSE;
 BOOL g_unhookKeyboard = FALSE;
 BOOL g_exitStMain = FALSE;
-BOOL g_noScreenWatch = FALSE;
+BOOL g_fakeScreenshot = FALSE;
 BOOL g_noTopMostWindow = FALSE;
 char g_StMainPath[MAX_PATH] = { 0 };
 DWORD g_StMainId = 0;
@@ -199,9 +199,9 @@ VOID SetExitStMain(BOOL x)
 	return;
 }
 
-VOID SetNoScreenWatch(BOOL x)
+VOID SetFakeScreenshot(BOOL x)
 {
-	g_noScreenWatch = x;
+	g_fakeScreenshot = x;
 	return;
 }
 

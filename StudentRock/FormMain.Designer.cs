@@ -45,7 +45,7 @@
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.c_enableTerminate = new System.Windows.Forms.CheckBox();
             this.c_unhookKeyboard = new System.Windows.Forms.CheckBox();
-            this.c_noScreenWatch = new System.Windows.Forms.CheckBox();
+            this.c_fakeScreenshot = new System.Windows.Forms.CheckBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.coreConfig = new System.Windows.Forms.GroupBox();
             this.labelVersion = new System.Windows.Forms.Label();
@@ -190,15 +190,15 @@
             this.c_unhookKeyboard.Text = "解锁键盘";
             this.c_unhookKeyboard.UseVisualStyleBackColor = true;
             // 
-            // c_noScreenWatch
+            // c_fakeScreenshot
             // 
-            this.c_noScreenWatch.AutoSize = true;
-            this.c_noScreenWatch.Location = new System.Drawing.Point(6, 20);
-            this.c_noScreenWatch.Name = "c_noScreenWatch";
-            this.c_noScreenWatch.Size = new System.Drawing.Size(72, 16);
-            this.c_noScreenWatch.TabIndex = 0;
-            this.c_noScreenWatch.Text = "屏蔽截屏";
-            this.c_noScreenWatch.UseVisualStyleBackColor = true;
+            this.c_fakeScreenshot.AutoSize = true;
+            this.c_fakeScreenshot.Location = new System.Drawing.Point(6, 20);
+            this.c_fakeScreenshot.Name = "c_fakeScreenshot";
+            this.c_fakeScreenshot.Size = new System.Drawing.Size(72, 16);
+            this.c_fakeScreenshot.TabIndex = 0;
+            this.c_fakeScreenshot.Text = "屏幕伪装";
+            this.c_fakeScreenshot.UseVisualStyleBackColor = true;
             // 
             // buttonStart
             // 
@@ -218,7 +218,7 @@
             this.coreConfig.Controls.Add(this.buttonConfirm);
             this.coreConfig.Controls.Add(this.c_enableTerminate);
             this.coreConfig.Controls.Add(this.c_unhookKeyboard);
-            this.coreConfig.Controls.Add(this.c_noScreenWatch);
+            this.coreConfig.Controls.Add(this.c_fakeScreenshot);
             this.coreConfig.Location = new System.Drawing.Point(11, 165);
             this.coreConfig.Name = "coreConfig";
             this.coreConfig.Size = new System.Drawing.Size(242, 114);
@@ -235,7 +235,7 @@
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(70, 14);
             this.labelVersion.TabIndex = 11;
-            this.labelVersion.Text = "α Build 0";
+            this.labelVersion.Text = "α Build 1";
             // 
             // FormMain
             // 
@@ -276,7 +276,7 @@
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.CheckBox c_enableTerminate;
         private System.Windows.Forms.CheckBox c_unhookKeyboard;
-        private System.Windows.Forms.CheckBox c_noScreenWatch;
+        private System.Windows.Forms.CheckBox c_fakeScreenshot;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.GroupBox coreConfig;
         private System.Windows.Forms.Label labelVersion;
