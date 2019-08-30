@@ -12,17 +12,12 @@ fnGetDIBits fpGetDIBits = NULL;
 
 HDC WINAPI DetourGetDC(HWND hWnd)
 {
-	if (g_noScreenWatch && hWnd == NULL) {
-		printf("[Info] disallowed GetDC: hwnd:%d\n", (int)hWnd);
-		return NULL;
-	}
 	printf("[Info] allowed GetDC: hwnd:%d\n", (int)hWnd);
 	return fpGetDC(hWnd);
 }
 
 HDC WINAPI DetourCreateDCW(LPCWSTR pwszDriver, LPCWSTR pwszDevice, LPWSTR pszPort, const DEVMODEW* pdm)
 {
-	if (g_noScreenWatch && wcscmp(pwszDriver, L"DISPLAY") == 0) return NULL;
 	return fpCreateDCW(pwszDriver, pwszDevice, pszPort, pdm);
 }
 
@@ -43,7 +38,17 @@ BOOL WINAPI DetourSetWindowPos(HWND hWnd, HWND hWndInsertAfter, int  X, int  Y, 
 
 int WINAPI DetourGetDIBits(HDC hdc, HBITMAP hbm, UINT start, UINT cLines, LPVOID lpvBits, LPBITMAPINFO lpbmi, UINT usage)
 {
-	if (g_noScreenWatch) {
+	if (g_fakeScreenshot && lpvBits != NULL && cLines > 32) {
+		// cLines > 32: prevent cursor redraw
+		HBITMAP hbm = NULL;
+		if (OpenClipboard(NULL)) {
+			hbm = (HBITMAP)GetClipboardData(CF_BITMAP);
+			CloseClipboard();
+			int ret = NULL;
+			ret = fpGetDIBits(hdc, hbm, start, cLines, lpvBits, lpbmi, usage);
+			printf("[Info] read from clipboard: GetDIBits:%d cLines:%d\n", ret, cLines);
+			return ret;
+		}
 		printf("[Info] disallowed GetDIBits.\n");
 		return FALSE;
 	}
