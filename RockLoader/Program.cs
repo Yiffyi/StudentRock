@@ -23,8 +23,6 @@ namespace RockLoader
         {
             File.WriteAllBytes("LibStHook.dll", Properties.Resources.LIBSTHOOK);
             W(".");
-            File.WriteAllBytes("MinHook.x86.dll", Properties.Resources.MinHook_x86);
-            W(".");
             File.WriteAllBytes("SimpleUpdater.dll", Properties.Resources.SimpleUpdater);
             W(".");
             File.WriteAllBytes("StudentRock.exe", Properties.Resources.StudentRock);

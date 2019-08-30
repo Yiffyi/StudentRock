@@ -30,7 +30,7 @@ namespace StudentRock
 
         static bool CheckDepFiles()
         {
-            string[] dep = { "LibStHook.dll", "MinHook.x86.dll", "SimpleUpdater.dll" };
+            string[] dep = { "LibStHook.dll", "SimpleUpdater.dll" };
             foreach(string i in dep)
             {
                 if (!File.Exists(i)) return false;
