@@ -73,16 +73,6 @@ namespace RockLoader.Properties {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] MinHook_x86 {
-            get {
-                object obj = ResourceManager.GetObject("MinHook_x86", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
-        /// </summary>
         internal static byte[] SimpleUpdater {
             get {
                 object obj = ResourceManager.GetObject("SimpleUpdater", resourceCulture);

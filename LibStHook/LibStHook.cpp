@@ -5,7 +5,7 @@
 #include "framework.h"
 #include "LibStHook.h"
 #include "DetourFunctions.h"
-#include "MinHook/MinHook.h"
+#include "MinHook.h"
 
 typedef BOOL(*fnTDMasterDoneHook)();
 typedef BOOL(*fnTDProcHookEnableTerminate)(int);
@@ -26,8 +26,6 @@ BOOL g_showConsole = FALSE;
 
 extern HMODULE g_hDllModule;
 extern char szPath[MAX_PATH];
-
-#pragma comment(lib, "MinHook/MinHook.x86.lib")
 
 HMODULE hTDProcHook = NULL;
 HMODULE hTDMaster = NULL;

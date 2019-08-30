@@ -61,9 +61,6 @@
     <None Include="Resources\LIBSTHOOK.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MinHook.x86.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\SimpleUpdater.dll" />
   </ItemGroup>
   <ItemGroup>

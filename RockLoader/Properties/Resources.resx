@@ -121,9 +121,6 @@
   <data name="LIBSTHOOK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LIBSTHOOK.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MinHook_x86" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinHook.x86.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="SimpleUpdater" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SimpleUpdater.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
